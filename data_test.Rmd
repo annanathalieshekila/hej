@@ -6,7 +6,18 @@ output: html_document
 ---
 
 ```{r}
+library(tidyverse)
+library(readxl)
 data <- read_excel("pokemon.xlsx")
+view(data)
+
+```
+
+
+plots 
+```{r}
+data%>% ggplot(aes(y = height_m, x = weight_kg))+
+  geom_smooth(method = 'lm')
 ```
 
 
