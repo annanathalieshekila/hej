@@ -6,6 +6,7 @@ output: html_document
 ---
 
 ```{r}
+
 library(tidyverse)
 library(readxl)
 data <- read_excel("pokemon.xlsx")
@@ -20,4 +21,25 @@ data%>% ggplot(aes(y = height_m, x = weight_kg))+
   geom_smooth(method = 'lm')
 ```
 
+
+```{r}
+#till min kompis Alfons
+ggplot(data = data) +
+  geom_boxplot(mapping = aes(x = height_m, y = weight_kg, color = type1))
+```
+```{r}
+glimpse(data)
+```
+
+```{r}
+model1 <- lm(formula = hp ~ weight_kg, data = data)
+model2 <- lm(hp~weight_kg + weight_kg^2, data)
+
+summary.lm(model1)
+summary.lm(model2)
+
+ggplot(data, aes(y = hp, x = weight_kg))+
+  geom_smooth(method = 'lm')+
+  scale_y_continuous(breaks = seq(from= 0, to = 200, by = 10))
+```
 
