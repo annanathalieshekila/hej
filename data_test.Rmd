@@ -6,7 +6,10 @@ output: html_document
 ---
 
 ```{r}
+<<<<<<< HEAD
 library(tidyverse)
+=======
+>>>>>>> fec4fb6fd253b9862efcaede3a8866619863a434
 library(readxl)
 data <- read_excel("pokemon.xlsx")
 view(data)
@@ -20,4 +23,13 @@ data%>% ggplot(aes(y = height_m, x = weight_kg))+
   geom_smooth(method = 'lm')
 ```
 
+
+```{r}
+#till min kompis Alfons
+ggplot(data = data) +
+  geom_boxplot(mapping = aes(x = height_m, y = weight_kg, color = type1))
+```
+```{r}
+glimpse(data)
+```
 
