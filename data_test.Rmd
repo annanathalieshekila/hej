@@ -10,4 +10,12 @@ library(readxl)
 data <- read_excel("pokemon.xlsx")
 ```
 
+```{r}
+#till min kompis Alfons
+ggplot(data = data) +
+  geom_boxplot(mapping = aes(x = height_m, y = weight_kg, color = type1))
+```
+```{r}
+glimpse(data)
+```
 
