@@ -40,6 +40,7 @@ summary.lm(model2)
 
 ggplot(data, aes(y = hp, x = weight_kg))+
   geom_smooth(method = 'lm')+
-  scale_y_continuous(breaks = seq(from= 0, to = 200, by = 10))
+  scale_y_continuous(breaks = seq(from= 0, to = 200, by = 10))+
+  theme_bw()
 ```
 
