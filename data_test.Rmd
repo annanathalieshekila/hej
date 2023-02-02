@@ -1,0 +1,12 @@
+---
+title: "test for running scripts with data sets"
+author: "Alfons Edmar"
+date: "2023-02-02"
+output: html_document
+---
+
+```{r}
+data <- read_excel("pokemon.xlsx")
+```
+
+
